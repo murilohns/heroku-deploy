@@ -11,6 +11,7 @@ $app->get('/cowsay', function() use($app) {
   return "<pre>".\Cowsayphp\Cow::say("Cool beans")."</pre>";
 });
 
+
 // Register the monolog logging service
 $app->register(new Silex\Provider\MonologServiceProvider(), array(
   'monolog.logfile' => 'php://stderr',
